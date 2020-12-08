@@ -2,6 +2,8 @@
 
 <html>
     <head>
+
+        <!--여기에 작성되는 style 안에, 작성되는 모든 정보는 아래와 같이 처리하도록 하여라 라고 지정 하여 주는것 CSS-->
         <style>
             .js{
                 font-weight: bold;
@@ -13,7 +15,14 @@
             span{
                 color: blue;
             }
-
+            a {
+                color : black;
+                text-decoration : none;
+            }
+            h1{
+                text-align: center;
+                font-size: 50px ;
+            }
         </style>
 
         <P>
@@ -31,9 +40,7 @@
         <meta charset="utf-8">
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
         <script src="Colors.js"></script>
-
         <!-- 기존에 긴 코드를 모든 사이트에 적용하려면 다 코드를 복붙 해줘야 하는데, 이걸 하나의 자바 스크립트 파일로 만들고,
         위와 같이 단순히 하나의 스크립트를 설정만 해주면, 모든 코드에서 위와 같은걸로 다 적용 할수 있다.
          var Body = {
@@ -81,13 +88,25 @@ function nightDayHandler(self){
 
     <body style="">
 
+    <!-- CSS를 이용하여, 코드를 수정 하여 보자 -->
+
+    <h1><a href="main.html"  target = "_black">WEB</a></h1>
+
+    <ol>
+        <li><a href="HTML.html" target = "_black">HTML</a></li>
+        <li><a href="CSS.html" target = "_black" style="color:red;text-decoration:underline">CSS</a></li> <!--HTML의 속성이며, CSS의 기능이 들어온다는 약속이다. 2개 이상의 구분은 ; 론으로 하여 준다-->
+        <li><a href="JavaScript.html" target = "_black">JavaScript</a></li>
+    </ol> <!--구분 하여 주는 ul -->
+
+    <!--
     <h1><a href="main.html"  target = "_black"> WEB</a></h1>
 
     <ol>
         <li><a href="HTML.html" target = "_black">HTML</a></li>
         <li><a href="CSS.html" target = "_black">CSS</a></li>
         <li><a href="JavaScript.html" target = "_black">JavaScript</a></li>
-    </ol> <!--구분 하여 주는 ul -->
+    </ol> 구분 하여 주는 ul
+    -->
 
     <input id="night-day" type="button" value="night" onclick="nightDayHandler(this)">
     <!-- 일반적으로 아이디를 찾아서 변경하는것을, 해당 id가 있는곳에서 수행할경우, this로 변경 할수 있다.
