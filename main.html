@@ -23,6 +23,12 @@
                 text-align: center;
                 font-size: 50px ;
             }
+            .saw{
+                color:gray;
+            }
+            #active{
+                color:red;
+            }
         </style>
 
         <P>
@@ -93,8 +99,16 @@ function nightDayHandler(self){
     <h1><a href="main.html"  target = "_black">WEB</a></h1>
 
     <ol>
-        <li><a href="HTML.html" target = "_black">HTML</a></li>
-        <li><a href="CSS.html" target = "_black" style="color:red;text-decoration:underline">CSS</a></li> <!--HTML의 속성이며, CSS의 기능이 들어온다는 약속이다. 2개 이상의 구분은 ; 론으로 하여 준다-->
+        <li><a href="HTML.html" target = "_black" class ="saw">HTML</a></li>
+
+        <!--HTML의 속성이며, CSS의 기능이 들어온다는 약속이다. 2개 이상의 구분은 ; 론으로 하여 준다-->
+        <!--class를 이용하여, 속성값을 묶어 사용이 가능한데, 이때 2개 이상의 클래스를 사용하게 되면, 가장 나중에 선언된 클래스의 효과를 받는다-->
+        <!-- 그렇기 떄문에 id를 이용하여 사용하는것이 좋다.-->
+
+        <!--<li><a href="CSS.html" target = "_black"  class ="saw active">CSS</a></li>-->
+
+        <li><a href="CSS.html" target = "_black"  class ="saw" id="active">CSS</a></li>
+
         <li><a href="JavaScript.html" target = "_black">JavaScript</a></li>
     </ol> <!--구분 하여 주는 ul -->
 
