@@ -1,20 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
-<h1>JavaScript</h1>
-<script>
-    document.write(1+1);
-</script>
-<h1>html</h1>
-1+1
+    <head>
+        <meta charset="UTF-8">
+        <title>Object</title>
+    </head>
 
-<input type="button" value="hi" onclick="alert('hi')">
-<input type="text" onchange="alert('change')">
-<input tpye="text" onkeydown="alert('key down!')">
+    <body>
+     <h1>Object</h1>
 
-</body>
+     <h2>Create</h2>
+    <script>
+
+        // 객채 생성 !
+        var coworkers = {
+            "porogrammer":"sungil",
+            "designer":"mainsungil"
+        };
+
+        //객채 호출
+        document.write("programmer: " + coworkers.porogrammer+"<br>")
+        document.write("designer: " + coworkers.designer+"<br>")
+
+        //객채 넣는법
+        coworkers.bookkeeper = "duru";
+        document.write("bookkeeper : "+coworkers.bookkeeper+"<br>");
+        coworkers["data scientist"] = "taeho"   // 이름에는 공백을 넣을수 없다, 그래서, 배열로 사용한것
+        document.write("data scientist : "+coworkers["data scientist"]+"<br>") //띄어쓰기가 있어서 배열을 썻고, 그래서 .을 사용할수가 없다
+    </script>
+
+
+     <!-- 객채 반복 호출 -->
+    <h2>Iterate</h2>
+    <script>
+        for(var key in coworkers){
+            //docuent.write(key+'<br>')
+            //document.write(coworkers[key]+`<br>`)
+            document.write(key + ` : ` +coworkers[key]+`<br>`)
+        }
+    </script>
+
+    <h2>Property & Method</h2>
+    <script>
+        showAll 또한 coworkers에 포함 된것임으로, 별도로 제거 하여 주어야 한다.
+        coworkers.showAll = function (){
+            for(var key in this){
+                document.write(key + ` : ` +this[key]+`<br>`)
+            }
+        }
+
+        /*
+        단순히, 객채의 이름으로 선언할경우, 객채 이름이 바뀌게 되면 사용할수없게 된다 그리하여 this로 변경 하여 준다
+        coworkers.showAll = function (){
+            for(var key in coworkers){
+                document.write(key + ` : ` +coworkers[key]+`<br>`)
+            }
+        }
+         */
+
+        coworkers.showAll()
+
+    </script>
+
+    </body>
 </html>
