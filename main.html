@@ -3,33 +3,7 @@
 <html>
     <head>
 
-        <!--여기에 작성되는 style 안에, 작성되는 모든 정보는 아래와 같이 처리하도록 하여라 라고 지정 하여 주는것 CSS-->
-        <style>
-            .js{
-                font-weight: bold;
-                color:red;
-            }
-            #first{
-                color:gainsboro;
-            }
-            span{
-                color: blue;
-            }
-            a {
-                color : black;
-                text-decoration : none;
-            }
-            h1{
-                text-align: center;
-                font-size: 50px ;
-            }
-            .saw{
-                color:gray;
-            }
-            #active{
-                color:red;
-            }
-        </style>
+        <link rel="stylesheet" href="style.css">
 
         <P>
             <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -89,96 +63,97 @@ function nightDayHandler(self){
         Links.SetColor('blue')
     }
 }-->
-
     </head>
 
     <body style="">
 
     <!-- CSS를 이용하여, 코드를 수정 하여 보자 -->
+    <!-- HTML의 속성이며, CSS의 기능이 들어온다는 약속이다. 2개 이상의 구분은 ; 론으로 하여 준다
+        class를 이용하여, 속성값을 묶어 사용이 가능한데, 이때 2개 이상의 클래스를 사용하게 되면, 가장 나중에 선언된 클래스의 효과를 받는다
+        그렇기 떄문에 id를 이용하여 사용하는것이 좋다.
 
-    <h1><a href="main.html"  target = "_black">WEB</a></h1>
-
-    <ol>
-        <li><a href="HTML.html" target = "_black" class ="saw">HTML</a></li>
-
-        <!--HTML의 속성이며, CSS의 기능이 들어온다는 약속이다. 2개 이상의 구분은 ; 론으로 하여 준다-->
-        <!--class를 이용하여, 속성값을 묶어 사용이 가능한데, 이때 2개 이상의 클래스를 사용하게 되면, 가장 나중에 선언된 클래스의 효과를 받는다-->
-        <!-- 그렇기 떄문에 id를 이용하여 사용하는것이 좋다.-->
-
-        <!--<li><a href="CSS.html" target = "_black"  class ="saw active">CSS</a></li>-->
-
+        <li><a href="CSS.html" target = "_black"  class ="saw active">CSS</a></li>
         <li><a href="CSS.html" target = "_black"  class ="saw" id="active">CSS</a></li>
 
-        <li><a href="JavaScript.html" target = "_black">JavaScript</a></li>
-    </ol> <!--구분 하여 주는 ul -->
-
+        -->
     <!--
-    <h1><a href="main.html"  target = "_black"> WEB</a></h1>
-
-    <ol>
-        <li><a href="HTML.html" target = "_black">HTML</a></li>
-        <li><a href="CSS.html" target = "_black">CSS</a></li>
-        <li><a href="JavaScript.html" target = "_black">JavaScript</a></li>
-    </ol> 구분 하여 주는 ul
+        <ol>
+            <li><a href="HTML.html" target = "_black" class ="saw">HTML</a></li>
+            <li><a href="CSS.html" target = "_black"  class ="saw active">CSS</a></li>
+            <li><a href="JavaScript.html" target = "_black">JavaScript</a></li>
+        </ol>
     -->
 
-    <input id="night-day" type="button" value="night" onclick="nightDayHandler(this)">
-    <!-- 일반적으로 아이디를 찾아서 변경하는것을, 해당 id가 있는곳에서 수행할경우, this로 변경 할수 있다.
-    document.querySelector('#night-day') -->
+        <h1>
+            <a href="main.html">WEB</a>
+            <input id="night-day" type="button" value="night" onclick="nightDayHandler(this)">
+        </h1>
 
+    <div id="grid">
+            <ol>
+                <li><a href="HTML.html" target = "_black"  >HTML</a></li>
+                <li><a href="CSS.html" target = "_black"  >CSS</a></li>
+                <li><a href="JavaScript.html" target = "_black" >JavaScript</a></li>
+            </ol>
+        <!-- 일반적으로 아이디를 찾아서 변경하는것을, 해당 id가 있는곳에서 수행할경우, this로 변경 할수 있다.
+        document.querySelector('#night-day') -->
 
-    <H2>Main</H2>
-    <P> HI <a href ="https://www.w3.org/TR/html52/"
-              target = "_black"
-              title="html5" >Hypertext</a>
-    </P>
+        <div class="sector">
+            <H2>Main</H2>
+            <P> HI <a href ="https://www.w3.org/TR/html52/"
+                      target = "_black"
+                      title="html5" >Hypertext</a>
+            </P>
 
-    <img width="30%" src="testimg.jpg">
+            <img width="30%" src="testimg.jpg">
 
-    <p>
-        <iframe width="640" height="380"
-                src="https://www.youtube.com/embed/gviRS9zTgVw"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-        </iframe>
-    </p>
+            <p>
+                <iframe width="640" height="380"
+                        src="https://www.youtube.com/embed/gviRS9zTgVw"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                </iframe>
+            </p>
 
-    <p>
-        <div id="disqus_thread"></div>
-        <script>
-        /**
-        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-        /*
-        var disqus_config = function () {
-        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-        };
-        */
-        (function() { // DON'T EDIT BELOW THIS LINE
-        var d = document, s = d.createElement('script');
-        s.src = 'https://web1-ngfa7mvarj.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-        })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    </p>
-    <p>
-        <!--Start of Tawk.to Script-->
-        <script type="text/javascript">
-        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-        (function(){
-        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-        s1.async=true;
-        s1.src='https://embed.tawk.to/5fca0550a1d54c18d8f055d3/default';
-        s1.charset='UTF-8';
-        s1.setAttribute('crossorigin','*');
-        s0.parentNode.insertBefore(s1,s0);
-        })();
-        </script>
-        <!--End of Tawk.to Script-->
-    </p>
+            <p>
+            <div id="disqus_thread"></div>
+            <script>
+                /**
+                 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+                /*
+                var disqus_config = function () {
+                this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                };
+                */
+                (function() { // DON'T EDIT BELOW THIS LINE
+                    var d = document, s = d.createElement('script');
+                    s.src = 'https://web1-ngfa7mvarj.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            </p>
+            <p>
+                <!--Start of Tawk.to Script-->
+                <script type="text/javascript">
+                    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+                    (function(){
+                        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+                        s1.async=true;
+                        s1.src='https://embed.tawk.to/5fca0550a1d54c18d8f055d3/default';
+                        s1.charset='UTF-8';
+                        s1.setAttribute('crossorigin','*');
+                        s0.parentNode.insertBefore(s1,s0);
+                    })();
+                </script>
+                <!--End of Tawk.to Script-->
+            </p>
+        </div>
+    </div>
+
     </body>
 </html>

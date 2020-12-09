@@ -1,0 +1,68 @@
+
+/*<!--여기에 작성되는 style 안에, 작성되는 모든 정보는 아래와 같이 처리하도록 하여라 라고 지정 하여 주는것 CSS*/
+
+/*.js 클래스*/
+/*        # 은 id*/
+/*a 는 태그*/
+
+/*.js{*/
+/*    font-weight: bold;*/
+/*    color:red;*/
+/*}*/
+/*#first{*/
+/*    color:gainsboro;*/
+/*}*/
+
+/*<div> 는 블럭 (자동 줄바꿈)*/
+/*<span> 은 인라인 (줄바꿈이 없다)*/
+
+/*-->*/
+
+span{
+    color: blue;
+}
+a {
+    color : black;
+    text-decoration : none;
+}
+h1 {
+    font-size: 50px ;
+    border-bottom:1px solid gray;
+    margin:0px;
+    padding: 20px;
+}
+ol{
+    border-right: 1px solid gray;
+    width:100px;
+    margin:0px;
+    padding:20px;
+}
+body{
+    margin:0px
+}
+#night-day{
+    text-align: center;
+}
+#grid{
+    display:grid;
+    grid-template-columns:150px 1fr;
+}
+#grid ol{
+    padding-left:33px
+}
+.sector{
+    padding-left: 30px;
+}
+@media(max-width:850px) {
+    #grid{
+        display:block;
+        grid-template-columns:150px 1fr;
+    }
+    ol{
+        border-right: none;
+    }
+    h1{
+        border-bottom: none;
+    }
+}
+/*<!-- #grid ol 부모가 grid인 녀석 밑의 ol만 변화됨-->*/
